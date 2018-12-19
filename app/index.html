@@ -16,6 +16,7 @@
   <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+  <link rel="stylesheet" href="path/to/nice-select.css">
 
   <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color" content="#000">
@@ -43,11 +44,11 @@
           </ul>
         </div>
         <div class="navigation-content-right">
-          <!-- <div class="search">search</div> -->
-          <form>
+          <div class="search">search</div>
+          <!---<form>
             <input type="text" placeholder="Искать здесь...">
             <button type="submit"></button>
-          </form>
+          </form>--->
           <div id="shopping-cart-button">cart&nbsp;(2)</div>
           <!--<div id="shopping-cart">
             <div class="title">Shopping Bag</div>
@@ -114,7 +115,7 @@
           </div>
           <div class="product-size">Size charts</div>
           <div class="product-size-charts">
-            <select class="product-size-selection">
+            <select id="product-size-selection">
               <option value="#">39</option>
               <option value="#">40</option>
               <option value="#">41</option>
@@ -171,7 +172,7 @@
           <div class="product-description-image"></div>
           <div class="product-description-quantity-price">
             <div class="product-description-quantity">en stock</div>
-            <div clasas="product-description-price">$ 160.00</div>
+            <div class="product-description-price">$ 160.00</div>
           </div>
           <div class="product-description-charts">
             <select class="product-description-selection">
@@ -213,6 +214,8 @@
     </div>
   </div>
   <script src="js/scripts.min.js"></script>
+  <script src="path/to/jquery.js"></script>
+  <script src="path/to/jquery.nice-select.js"></script>
 </body>
 
 </html>

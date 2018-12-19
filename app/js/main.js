@@ -36,3 +36,7 @@ $('.plus-btn').on('click', function(e) {
 
     $input.val(value);
 });
+
+$(#product-size-selection).ready(function() {
+  $('select').niceSelect();
+});
