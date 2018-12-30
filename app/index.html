@@ -34,7 +34,7 @@
     <div class="container-content">
       <div class="navigation-content">
         <div class="navigation-content-left">
-          <div id="label"></div>
+          <div id="label" class="label"></div>
           <ul class="menu">
             <li><a href="#">footwear</a></li>
             <li><a href="#">clothing</a></li>
@@ -44,54 +44,9 @@
           </ul>
         </div>
         <div class="navigation-content-right">
-          <div class="search">search</div>
-          <!---<form>
-            <input type="text" placeholder="Искать здесь...">
-            <button type="submit"></button>
-          </form>--->
+          <div id="search">search</div>
           <div id="shopping-cart-button">cart&nbsp;(2)</div>
-          <!--<div id="shopping-cart">
-            <div class="title">Shopping Bag</div>
-
-            <div class="item">
-              <div class="buttons">
-                <span class="delete-btn"></span>
-                <span class="like-btn"></span>
-              </div>
-              <div class="image-product"></div>
-              <div class="description-cart">
-                <span>Common Projects</span>
-                <span>Bball High</span>
-                <span>White</span>
-              </div>
-              <div class="quantity">
-                <button class="minus-btn" type="button" name="button"></button>
-                <input type="text" name="name" value="1">
-                <button class="plus-btn" type="button" name="button"></button>
-              </div>
-              <div class="total-price">$549</div>
-            </div>
-
-            <div class="item">
-              <div class="buttons">
-                <span class="delete-btn"></span>
-                <span class="like-btn"></span>
-              </div>
-              <div class="image-product"></div>
-              <div class="description-cart">
-                <span>Common Projects</span>
-                <span>Bball</span>
-                <span>White</span>
-              </div>
-              <div class="quantity">
-                <button class="minus-btn" type="button" name="button"></button>
-                <input type="text" name="name" value="1">
-                <button class="plus-btn" type="button" name="button"></button>
-              </div>
-              <div class="total-price">$800</div>
-            </div>
-          </div>-->
-          <div class="sing">sing&nbsp;in</div>
+          <div id="sing">sing&nbsp;in</div>
         </div>
       </div>
     </div>
@@ -100,7 +55,7 @@
   <div class="footwear-main">
     <div class="container-content">
       <div class="footwear-main-content">
-        <div class="footwear-image-content"></div>
+        <img src="../img/footwear.jpg" alt="footwear">
         <div class="footwear-product-content">
           <div class="product-like"></div>
           <div class="product-name">
@@ -116,6 +71,7 @@
           <div class="product-size">Size charts</div>
           <div class="product-size-charts">
             <select id="product-size-selection">
+              <option data-display="size"></option>
               <option value="#">39</option>
               <option value="#">40</option>
               <option value="#">41</option>
@@ -175,7 +131,8 @@
             <div class="product-description-price">$ 160.00</div>
           </div>
           <div class="product-description-charts">
-            <select class="product-description-selection">
+            <select id="product-size-selection">
+              <option data-display="size"></option>
               <option value="#">39</option>
               <option value="#">40</option>
               <option value="#">41</option>
@@ -214,7 +171,148 @@
     </div>
   </div>
 
+  <div id="navigation-menu-container">
+    <div class="container-content">
+      <ul class="navigation-menu">
+        <li><a href="#">footwear</a></li>
+        <li><a href="#">clothing</a></li>
+        <li><a href="#">accessories</a></li>
+        <li><a href="#">brands</a></li>
+        <li><a href="#">exlusive</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!--<div class="search-on">
+    <div class="container-content">
+      <div class="search-on-content">
+        <div class="search-on-title-content">
+          <div class="search-title">search on bree
+            <div class="start">Start typing</div>
+          </div>
+          <div class="search-close-button"></div>
+        </div>
+        <form>
+          <div class="search-on-button">
+            <input type="text">
+            <input type="search">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>-->
+
+  <!--<div class="information">
+    <div class="container-content">
+      <div class="information-cart-content">
+        <div class="information-content">
+          <div class="information-title">informations</div>
+          <div class="personnal">personnal informations</div>
+          <select id="country">
+            <option value="#">England</option>
+            <option value="#">France</option>
+            <option value="#">Germany</option>
+            <option value="#">Italien</option>
+            <option value="#">Russland</option>
+          </select>
+          <form>
+            <input type="first-name" placeholder="First name">
+            <input type="second-name" placeholder="Second name">
+            <input type="adress" placeholder="Adress">
+            <input type="postal-code" placeholder="Postal code">
+            <input type="city" placeholder="City">
+            <input type="e-mail" placeholder="E-mail">
+            <input type="phone" placeholder="Phone">
+          </form>
+          <div class="note">Notes</div>
+          <input type="note" placeholder="Note">
+          <div class="delivery">delivery mode</div>
+          <select class="delivers-mode">
+            <option value="#">Collisimo France,$20.00</option>
+            <option value="#">Collisimo England,$25.00</option>
+            <option value="#">Collisimo Germany,$30.00</option>
+            <option value="#">Collisimo Italien,$50.00</option>
+            <option value="#">Collisimo Russland,$100.00</option>
+          </select>
+        </div>
+        <div class="your-cart-content">
+          <div class="your-cart-title">your cart</div>
+          <div class="your-item-container">
+            <div class="quantity-cart">
+              <button class="plus-btn" type="button" name="button">
+              </button>
+              <input type="text" name="name" value="1">
+              <button class="minus-btn" type="button" name="button">
+              </button>
+            </div>
+            <div class="image-cart">
+              <img src="../img/cart-footwear.png" alt="footwear">
+            </div>
+            <div class="description-produck-cart">
+              <div class="footwear-brand">comme des garcons play</div>
+              <div class="footwer-brand-description">Rod Laver Vintage-exclusive</div>
+            </div>
+            <div class="footwear-size-title">size</div>
+            <div class="footwear-size">7,5</div>
+            <div class="total-price">$105.00</div>
+          </div>
+
+          <div class="your-item-container">
+            <div class="quantity-cart">
+              <button class="plus-btn" type="button" name="button">
+              </button>
+              <input type="text" name="name" value="1">
+              <button class="minus-btn" type="button" name="button">
+              </button>
+            </div>
+            <div class="image-cart">
+              <img src="../img/cart-nike.png" alt="footwear">
+            </div>
+            <div class="description-produck-cart">
+              <div class="footwear-brand">nike</div>
+              <div class="footwer-brand-description">Air Max Tavas SD</div>
+            </div>
+            <div class="footwear-size-title">size</div>
+            <div class="footwear-size">7,5</div>
+            <div class="total-price">$160.00</div>
+          </div>
+          <div class="last-informations">
+            <div class="consent-container">
+              <div class="consent-block"></div>
+              <div class="consent">I agree <span>terms of use and privacy</span></div>
+            </div>
+            <div class="total-button-container">
+              <div class="shipping-container">
+                <div class="shipping-title">shipping</div>
+                <div class="shipping-price">$20.00</div>
+              </div>
+              <div class="subtotal-container">
+                <div class="subtotal-title">subtotal</div>
+                <div class="subtotal-price">$285.00</div>
+              </div>
+              <button class="submit">confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!--<div class="sing-in">
+    <div class="container-content">
+      <div class="sing-in-container">
+        <form id="slick-login">
+          <label for="username">Login:</label><input type="text" name="username" class="placeholder" placeholder="Enter e-mail">
+          <label for="password">Password:</label><input type="password" name="password" class="placeholder" placeholder="Enter password">
+          <input type="submit" value="Come in">
+        </form>
+      </div>
+    </div>
+  </div>-->
+
+
   <script src="js/scripts.min.js"></script>
 
 </body>
+
 </html>
