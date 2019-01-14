@@ -46,12 +46,12 @@ $(function() {
 
   $("#product-description-size-selection").niceSelect();
 
-  $("#menu-button").click(function(event) {
-    $("#navigation-menu-container").addClass("visible");
-  });
+  $("#country").niceSelect();
 
-  $("#navigation-close").click(function(event) {
-    $("#navigation-menu-container").removeClass("visible");
+  $("#delivers-mode").niceSelect();
+
+  $("#menu-button").click(function() {
+    $("#navigation-menu-container").toggleClass("visible");
   });
 
   $("#search").click(function(event) {
@@ -76,5 +76,13 @@ $(function() {
 
   $("#sing-in-close").click(function(event) {
     $("#sing-in").removeClass("visible");
+  });
+
+  $(".consent-block").click(function() {
+    $(".consent-block").toggleClass("box-agree");
+  });
+
+  $(".product-like").click(function() {
+    $(".product-like").toggleClass("product-like-hidden");
   });
 });
