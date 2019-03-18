@@ -50,8 +50,9 @@ $(function() {
 
   $("#delivers-mode").niceSelect();
 
-  $("#menu-button").click(function() {
+  $(".menu-button").click(function() {
     $("#navigation-menu-container").toggleClass("visible");
+    $(".menu-button").toggleClass("navigation-close");
   });
 
   $("#search").click(function(event) {

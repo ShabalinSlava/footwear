@@ -59,6 +59,7 @@ body
 .navigation
 	width: 100%
 	position: fixed
+	z-index: 10
 
 .container-content
   max-width: 1280px
@@ -151,7 +152,7 @@ li:nth-child(5)
 	padding: 0px 64px 0px 24px
 	cursor: pointer
 
-#menu-button
+.menu-button
 	display: none
 	background-image: url("../img/menu.png")
 	background-repeat: no-repeat
@@ -504,8 +505,7 @@ span
 #navigation-menu-container.visible
 	display: block
 
-#navigation-close
-	display: block
+.navigation-close
 	background-image: url("../img/close.png")
 	width: 17px
 	height: 17px
@@ -517,7 +517,7 @@ ul.navigation-menu
 	display: flex
 	flex-direction: column
 	list-style-type: none
-	padding: 0px
+	padding: 17px 0px
 	margin: 0px
 
 
@@ -531,6 +531,7 @@ ul.navigation-menu a
 	text-decoration: none
 	background-color: #000
 	color: #fff
+
 
 
 ul.navigation-menu li
@@ -581,6 +582,8 @@ ul.navigation-menu li
 	width: 17px
 	height: 17px
 	cursor: pointer
+	background-repeat: no-repeat
+	padding: 0px 12px
 
 .search-on-button
 	position: relative
@@ -593,7 +596,7 @@ ul.navigation-menu li
 .search-on-button input
 	font-size: 60px
 	color: #3da4d8
-	padding: 0px 10px
+	padding: 0px 20px
 
 input[type="text"]
 	border: none
@@ -613,6 +616,7 @@ input[type="search"]
 	background: url("../img/search-icon.png")
 	background-repeat: no-repeat
 	outline: none
+
 
 .footwear-title
 	font-size: 18px
@@ -960,10 +964,6 @@ button[class*=btn]
 	height: 17px
 
 
-@media screen and (max-width:1300px)
-	.product-story-description-content
-		flex-direction: column
-
 @media screen and (max-width:1280px)
 	.menu a:hover
 		color: #000
@@ -974,10 +974,14 @@ button[class*=btn]
 		border-bottom: 5px solid
 
 @media screen and (max-width:1150px)
+
+	.footwear-main-content
+		padding: 98px 0px 100px
 	.footwear-main-content img
 		position: relative
 		width: 100%
 		max-width: 100%
+		padding: 0px 200px 0px 50px
 
 	.footwear-product-content
 		display: flex
@@ -986,7 +990,7 @@ button[class*=btn]
 		max-width: 100%
 		padding: 30px 30px 0px 0px
 
-	.product-like, .product-name, .product-price, .product-colors
+	.product-like, .product-name, .product-price, .product-colors, .product-color-selection-image, .product-size, .product-size-charts
 		position: absolute
 		margin-bottom: 0px
 
@@ -1012,19 +1016,23 @@ button[class*=btn]
 
 	.product-size
 		right: 25px
-		bottom: 300px
+		top: 290px
 
 	.product-size-charts
-		right: 25px
-		bottom: 240px
+		flex-direction: column
+		right: 20px
+		top: 330px
+
+	.product-cart
+		margin: 10px 0px 0px 0px
 
 @media screen and (max-width:992px)
 
-	#menu-button
+	.menu-button
 		display: block
 
 	.footwear-main-content img
-		padding: 0px 60px 0px 60px
+		padding: 0px 200px 0px 50px
 
 	.menu
 		display: none
@@ -1045,11 +1053,31 @@ button[class*=btn]
 	.footwear-model-information
 		top: 0px
 
+	.footwear-main-content
+		padding: 98px 0px 100px
+
+	.product-description
+		background-image: url("../img/pair shoes.png")
+		background-image: none
+
+	.product-story-content
+		padding: 60px 0px 0px 50px
+
+	.product-description-content
+		margin: 60px 49px 0px 0px
+
+	.footwear-social-content
+		padding: 80px 0px 100px
+
 
 @media screen and (max-width:768px)
 
 	.product-like
+		top: 60px
 		right: 215px
+
+	.product-name
+		top: 60px
 
 	.product-name-nike
 		font-size: 20px
@@ -1058,17 +1086,27 @@ button[class*=btn]
 		font-size: 30px
 
 	.product-price
+		top: 160px
 		font-size: 16px
 
 	.product-colors
+		top: 135px
 		font-size: 12px
 
+	.product-color-selection-image
+		top: 160px
+
+	.product-size
+		top: 250px
+
+	.product-size-charts
+		top: 270px
+
 	.product-description
-		background-image: url("../img/pair shoes.png")
-		background-image: none
 		padding-bottom: 50px
 
 	.product-story-description-content
+		flex-direction: column
 		align-items: center
 
 	.product-story-content
@@ -1083,13 +1121,16 @@ button[class*=btn]
 	.search-on-button input
 		font-size: 50px
 
+	.footwear-social-content
+		padding: 60px 0px 100px
+
 @media screen and (max-width:600px)
 
 	.footwear-main-content
 		padding: 98px 0px 100px
 
 	.footwear-social-content
-		padding: 76px 0px 100px
+		padding: 50px 0px 100px
 
 	.footwear-main-content img
 		padding: 0 60px 60px 60px
@@ -1099,7 +1140,7 @@ button[class*=btn]
 		margin-right: 0px
 		padding: 0px
 
-	.product-name, .product-price, .product-colors
+	.product-name, .product-price, .product-colors, .product-color-selection-image, .product-size, .product-size-charts
 		position: static
 
 	.product-like
@@ -1118,6 +1159,9 @@ button[class*=btn]
 	.product-price
 		font-size: 18px
 		margin-bottom: 12px
+
+	.product-size
+		margin-bottom: 10px
 
 	.product-colors
 		font-size: 14px
@@ -1147,7 +1191,7 @@ button[class*=btn]
 		max-width: 100%
 
 	.footwear-brand
-		font-size: 14px
+		font-size: 12px
 
 	.footwer-brand-description
 		font-size: 12px
@@ -1160,6 +1204,9 @@ button[class*=btn]
 
 	.footwear-model
 		width: 100%
+
+	ul.navigation-menu
+		padding: 10px 0px
 
 	ul.navigation-menu a
 		width: 4em
@@ -1178,9 +1225,25 @@ button[class*=btn]
 	.search-on-button input
 		font-size: 30px
 
-	.navigation-content-right
+	.last-informations
+		flex-direction: column-reverse
+		align-items: center
+
+	.consent-container
+		justify-content: center
+		padding-left: 0px
 		width: 100%
-		justify-content: space-around
+
+	.total-button-container
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 20px
+		width: 100%
+
+	.description-produck-cart
+		margin: 5px 20px 0px 0px
+
 
 
 @media screen and (max-width:320px)
